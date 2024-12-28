@@ -13,5 +13,5 @@ class Variables:
             # print(file_content)
             
 
-var=Variables('database')
+var=Variables('server')
 print(var.get_variable())
