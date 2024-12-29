@@ -1,5 +1,5 @@
 import psycopg2
-from Variables import *
+from Variables import host,database,user,password
 from Loggers import *
 
 logger=Logger().get_logger()
@@ -10,10 +10,10 @@ class Database():
     def connect(self):
         try:
             self.connection=psycopg2.connect(
-                host=Variables('server').get_variable(),
-                database=Variables('database').get_variable(),
-                user=Variables('username').get_variable(),
-                password=Variables('password').get_variable()
+                host=host,
+                database=database,
+                user=user,
+                password=password
             )
             logger.info("Database connection established successfully.")
             return self.connection 
