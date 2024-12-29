@@ -1,8 +1,9 @@
 import logging
+from Variables import log_name,log_path
 
 
 class Logger:
-    def __init__(self, logger_name="my_logger", log_file="logs/app.log"):
+    def __init__(self, logger_name=str(log_name), log_file=str(log_path)):
         self.log_level=logging.DEBUG
         self.logger = logging.getLogger(logger_name)
         self.logger.setLevel(self.log_level)
