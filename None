@@ -1,2 +1,14 @@
 2024-12-29 08:45:05,494 - None - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
 
+2025-01-05 09:21:47,507 - None - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-01-05 09:22:54,101 - None - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-01-05 09:23:12,941 - None - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-01-05 09:24:38,300 - None - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-01-05 09:25:32,244 - None - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-01-05 09:26:39,447 - None - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
