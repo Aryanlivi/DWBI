@@ -1,18 +1,19 @@
 from Database import *
+from Variables import SRC_DB,STG_DB,SRC_CSV_OP_PATH
 
-db=Database()
-db.connect()
-db.ext_to_file()
-db.connect_to_olap_stg_db()  # Connect to the external database
+src_db_instance=Database(database=SRC_DB)
+src_db_instance.ext_to_file()
 
-# Fetch the table names from the external database
-tables = db.fetch_table_names_from_stg_db()
+stg_db_instance=Database(database=STG_DB)
+stg_db_instance.connect(host=host)
 
-# If tables are fetched, load data for each table
-if tables:
-    for table in tables:
-        table_name = table[0]  # Extract table name from the tuple
-        file_name = f"{table_name}.csv"  # Assuming CSV filenames are the same as table names
-        db.load_to_table(table_name, file_name)
+src_tables =src_db_instance.export_tables_to_csv(SRC_CSV_OP_PATH)
+
+# if tables:
+#     for table in tables:
+#         table_name = table[0]  # Extract table name from the tuple
+#         file_name = f"{table_name}.csv"  # Assuming CSV filenames are the same as table names
+#         stg_db_instance.load_csv_to_table(table_name, file_name)
+    
 # # data = db.fetch("SELECT * FROM Customer;")
 db.disconnect()
